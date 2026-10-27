@@ -1,0 +1,2152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML, CSS &amp; JavaScript — All-in-One</title>
+<link rel="icon" type="image/svg+xml" href="https://pph.name.ng/pphlogo.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="reading-progress"><div class="reading-progress-fill"></div></div>
+<div class="page-indicator">Page 1</div>
+<div class="page-hint">← → arrow keys to turn pages</div>
+
+<!-- ============================================================
+     FRONT COVER
+     ============================================================ -->
+<section class="book-page cover-page active" id="cover">
+  <div class="cover-content">
+    <p class="cover-series">All-in-One</p>
+    <h1>HTML, CSS &amp; JavaScript</h1>
+    <p class="cover-subtitle">A complete course in web coding, from first tag to finished layout</p>
+    <p class="cover-author">By Paul McFedries</p>
+    <div class="cover-note">
+      Five books. Thirty-two chapters. One language of the web.<br>
+      Begin with the tools. Learn the structure. Master the style. Script the behavior. Lay out the page.
+    </div>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin the Journey →</button>
+    </div>
+    <div class="cover-credit">
+      Refactored &amp; illustrated by<br>
+      <a href="https://agunechemba.name.ng" target="_blank" rel="noopener">Agunechemba Ekene</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TABLE OF CONTENTS
+     ============================================================ -->
+<section class="book-page toc-page" id="toc">
+  <div class="chapter-header">
+    <p class="chapter-part">Contents</p>
+    <h2>What Lies Ahead</h2>
+    <p class="chapter-tagline">Five books, one journey through the technologies of the web.</p>
+  </div>
+
+  <div class="toc-part">
+    <h3>Book One · Getting Started</h3>
+    <ol>
+      <li><a href="#ch-acquainted">Getting Acquainted with HTML, CSS, and JavaScript</a></li>
+      <li><a href="#ch-ready-to-code">Getting Ready to Code</a></li>
+      <li><a href="#ch-web-host">Finding and Setting Up a Web Host</a></li>
+      <li><a href="#ch-test-validate">Testing and Validating Your Code</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Book Two · Learning HTML Basics</h3>
+    <ol start="5">
+      <li><a href="#ch-structure">Building Good Bones: Structuring the Page</a></li>
+      <li><a href="#ch-text-tidbits">Adding Links, Lists, and Other Text Tidbits</a></li>
+      <li><a href="#ch-media">Working with Images, Video, and Other Media</a></li>
+      <li><a href="#ch-tables">Building Tables with Your Bare Hands</a></li>
+      <li><a href="#ch-forms">Using Forms to Make a Page Interactive</a></li>
+      <li><a href="#ch-accessible">Making Your Web Pages Accessible</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Book Three · Learning CSS Basics</h3>
+    <ol start="11">
+      <li><a href="#ch-box-model">Figuring Out the CSS Box Model</a></li>
+      <li><a href="#ch-selectors">Getting to Know the CSS Selectors</a></li>
+      <li><a href="#ch-pseudo">Pseudo School: Learning Pseudo-Classes and Pseudo-Elements</a></li>
+      <li><a href="#ch-css-sense">Making CSS Make Sense</a></li>
+      <li><a href="#ch-measure">Taking the Measure of CSS</a></li>
+      <li><a href="#ch-colors-bg">Fancifying Pages with Colors and Backgrounds</a></li>
+      <li><a href="#ch-typography">Taking Your Text Up a Notch with Web Typography</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Book Four · Building Dynamic Pages with JavaScript</h3>
+    <ol start="18">
+      <li><a href="#ch-js-bird-eye">JavaScript: The Bird's-Eye View</a></li>
+      <li><a href="#ch-variables">Understanding Variables</a></li>
+      <li><a href="#ch-expressions">Building Expressions</a></li>
+      <li><a href="#ch-flow">Controlling the Flow of JavaScript</a></li>
+      <li><a href="#ch-functions">Harnessing the Power of Functions</a></li>
+      <li><a href="#ch-dom">Playing with the Document Object Model</a></li>
+      <li><a href="#ch-arrays">Working with Arrays</a></li>
+      <li><a href="#ch-strings-dates-numbers">Manipulating Strings, Dates, and Numbers</a></li>
+      <li><a href="#ch-web-storage">Storing User Data in the Browser</a></li>
+      <li><a href="#ch-debugging">Debugging Your Code</a></li>
+      <li><a href="#ch-form-data">Processing Form Data</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Book Five · Looking Good with Layouts</h3>
+    <ol start="29">
+      <li><a href="#ch-layout-basics">Exploring Some Layout Basics</a></li>
+      <li><a href="#ch-flexbox">Getting Fancy with Flexbox</a></li>
+      <li><a href="#ch-grid">Laying Out a Page with CSS Grid</a></li>
+      <li><a href="#ch-responsive">Creating Responsive Layouts</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>After the Journey</h3>
+    <ol start="33">
+      <li><a href="#glossary">The Little Dictionary</a></li>
+      <li><a href="#back">A Note for the Reader</a></li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Back to Cover</button>
+    <button class="nav-button" data-nav="next">Begin Book One →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     INTRODUCTION
+     ============================================================ -->
+<section class="book-page chapter-page" id="intro">
+  <div class="chapter-header">
+    <p class="chapter-part">Welcome</p>
+    <h2>Hello, Future Web Developer</h2>
+    <p class="chapter-tagline">A complete course in the language of the web.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>This book is a journey through the three technologies that make the web what it is. <em>HTML</em> gives a page its structure — headings, paragraphs, links, images, forms. <em>CSS</em> gives it style — colors, fonts, spacing, layout. <em>JavaScript</em> gives it behaviour — clicks, keypresses, calculations, communication with servers. Alone, each is useful; together, they are the web.</p>
+
+    <p>The journey runs in five parts. <strong>Book One</strong> gets your tools set up and shows you what each language does. <strong>Book Two</strong> walks you through the HTML elements you'll use on every page you ever build. <strong>Book Three</strong> teaches CSS from the box model outward. <strong>Book Four</strong> brings the page to life with JavaScript. <strong>Book Five</strong> shows you how to lay out pages that look good on any screen.</p>
+
+    <p>You do not need fancy software. A text editor, a modern browser, and a curious mind will get you through every chapter. Open a folder. Save a file. Reload the browser. That loop — <em>edit, save, reload, repeat</em> — is the whole secret of web development.</p>
+
+    <p>Ready? Let us begin.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Before You Go</h3>
+    <ul>
+      <li><strong>HTML</strong> provides structure; <strong>CSS</strong> provides style; <strong>JavaScript</strong> provides behaviour.</li>
+      <li>The browser is your lab — reload early, reload often.</li>
+      <li>You learn to code by writing code, breaking it, and fixing it.</li>
+      <li>Every professional programmer writes bugs every day. You will too. That's fine.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Warm-Up Questions</h3>
+    <ol>
+      <li>What's one website you use every day? Try to describe how its structure, style, and behaviour might be built.</li>
+      <li>What does "reload" do in a browser?</li>
+      <li>What file extension would you give a web page file?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Contents</button>
+    <button class="nav-button" data-nav="next">Enter Book One →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOK 1 DIVIDER — GETTING STARTED
+     ============================================================ -->
+<section class="book-page cover-page part-page" id="book-one">
+  <div class="cover-content">
+    <p class="part-number">Book One</p>
+    <h1>Getting Started</h1>
+    <p class="part-desc">Tools, browsers, editors, web hosts, and a way of working that will serve you for the whole book.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter One →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 1 — GETTING ACQUAINTED
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-acquainted">
+  <div class="chapter-header">
+    <p class="chapter-part">Book One · Getting Started · Chapter One</p>
+    <h2>Getting Acquainted with HTML, CSS, and JavaScript</h2>
+    <p class="chapter-tagline">What each of the three does, and why the web runs on them.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Every web page you have ever visited is built from three ingredients. <strong>HTML</strong> (HyperText Markup Language) describes the page's structure — the headings, the paragraphs, the images, the links. <strong>CSS</strong> (Cascading Style Sheets) describes the page's appearance — the fonts, colors, spacing, layout. <strong>JavaScript</strong> describes the page's behaviour — what happens when you click a button, submit a form, or scroll to the bottom.</p>
+
+    <p>HTML is a markup language, which means it wraps bits of content in tags that describe what each piece is. CSS is a style language, which means it applies rules to those tags. JavaScript is a full programming language — it can store values, make decisions, repeat things, and respond to the user.</p>
+
+    <p>You don't need fancy software to build a page. You need a text editor to write the code and a browser to view the result. The browser reads your HTML, applies your CSS, runs your JavaScript, and draws the page you see.</p>
+
+    <pre class="code-example"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;p&gt;This is my first web page.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <p>Save that code as <code>index.html</code>, open it in your browser, and you have built a web page. That's it. Every complicated site you've ever seen is a longer, richer version of that same structure.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>HTML gives structure; CSS gives style; JavaScript gives behaviour.</li>
+      <li>All three live inside a plain text file with an <code>.html</code> extension.</li>
+      <li>The browser reads your code top to bottom and renders the result.</li>
+      <li>You need only a text editor and a browser to get started.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Type the sample code into a new file, save it as <code>index.html</code>, and open it in your browser.</li>
+      <li>Change the <code>&lt;h1&gt;</code> text to your own name and reload.</li>
+      <li>Add a second paragraph below the first.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Book One</button>
+    <button class="nav-button" data-nav="next">Chapter Two →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 2 — GETTING READY TO CODE
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-ready-to-code">
+  <div class="chapter-header">
+    <p class="chapter-part">Book One · Getting Started · Chapter Two</p>
+    <h2>Getting Ready to Code</h2>
+    <p class="chapter-tagline">Browsers, folders, editors, and the workbench.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Before you write more code, set up your workspace. First, install the four major browsers: <strong>Chrome</strong>, <strong>Edge</strong>, <strong>Firefox</strong>, and — on a Mac — <strong>Safari</strong>. You don't need all four, but testing in more than one catches problems early.</p>
+
+    <p>Second, create a folder on your computer to hold all your web projects. Call it <code>public_html</code> or <code>htdocs</code> — both are traditional names. Inside it, make subfolders for <code>css</code>, <code>js</code>, and <code>images</code>. Keeping files organised is the difference between a project you can maintain and a folder full of mystery.</p>
+
+    <p>Third, choose a text editor. The editor that came with your computer — Notepad on Windows, TextEdit on the Mac — will technically do. But the good ones offer <strong>syntax highlighting</strong>, <strong>line numbers</strong>, <strong>code completion</strong>, and <strong>previews</strong> — and they make the work of writing code much easier. Free options: Visual Studio Code, Notepad++, Brackets, Atom. Paid options: Sublime Text, Nova.</p>
+
+    <p>Finally, keep a <strong>workbench</strong> handy for quick experiments. The WebDev Workbench (or CodePen) lets you type HTML, CSS, and JavaScript into three tabs and see the result instantly — no files, no saving, no reloading. It's a great way to test an idea before committing it to a file.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Install more than one browser for testing.</li>
+      <li>Create a project folder with subfolders for <code>css</code>, <code>js</code>, and <code>images</code>.</li>
+      <li>Use a proper text editor — the features pay for themselves.</li>
+      <li>Use an online workbench for quick experiments.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create your project folder and its three subfolders.</li>
+      <li>Install Visual Studio Code (or another editor of your choice).</li>
+      <li>Open the WebDev Workbench and change the background color of the page using the CSS tab.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter One</button>
+    <button class="nav-button" data-nav="next">Chapter Three →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 3 — FINDING AND SETTING UP A WEB HOST
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-web-host">
+  <div class="chapter-header">
+    <p class="chapter-part">Book One · Getting Started · Chapter Three</p>
+    <h2>Finding and Setting Up a Web Host</h2>
+    <p class="chapter-tagline">Getting your pages out of your computer and onto the web.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Your web page isn't "on the web" until it lives on a computer that other computers can reach. That computer is called a <strong>web server</strong>, and the company that runs it is called a <strong>web hosting provider</strong>.</p>
+
+    <p>You have three choices for hosting. Your existing internet service provider may offer space — ask. A free hosting service (like GitHub Pages, Cloudflare Pages, or Netlify) will host static HTML, CSS, and JavaScript files at no charge. A commercial provider will offer more storage, more bandwidth, better support, and a domain name — for a monthly fee.</p>
+
+    <p>When shopping for a host, understand the vocabulary: <em>storage space</em> (how many files you can keep), <em>bandwidth</em> (how much data the server can send each month), <em>domain name</em> (like <code>example.com</code>), <em>email</em>, <em>server type</em>, <em>databases</em>, <em>uptime</em>, and <em>tech support</em>.</p>
+
+    <p>When you sign up, you get a <strong>root directory</strong> on the server and a <strong>web address</strong>. Anything you upload to the root directory is visible at the matching web address. To keep things simple, mirror your local folder structure on the server: if you have a <code>css</code> subfolder on your computer, put a <code>css</code> subfolder on the server too.</p>
+
+    <p>Upload your files using FTP (with a client like Cyberduck or FileZilla), your editor's built-in upload feature, or your host's file manager. Then — when you update a file — you don't edit it on the server; you edit the local copy and re-upload.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>A page lives "on the web" only when it lives on a web server.</li>
+      <li>Free hosts exist for static files; paid hosts offer more features.</li>
+      <li>Mirror your local folder structure on the server.</li>
+      <li>Upload files with FTP; edit locally and re-upload when you change something.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create a free GitHub account and enable GitHub Pages for a repository.</li>
+      <li>Upload your <code>index.html</code> from Chapter One and view it at the live URL.</li>
+      <li>Change the heading, re-upload, and reload the page.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Two</button>
+    <button class="nav-button" data-nav="next">Chapter Four →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 4 — TESTING AND VALIDATING
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-test-validate">
+  <div class="chapter-header">
+    <p class="chapter-part">Book One · Getting Started · Chapter Four</p>
+    <h2>Testing and Validating Your Code</h2>
+    <p class="chapter-tagline">Making sure your pages work everywhere — and follow the rules.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Testing on only one browser is the single biggest mistake a new developer makes. Chrome is popular, yes — but visitors will show up using Safari, Firefox, Edge, and a hundred mobile variants. Test on Chrome, Firefox, Edge, and Safari. For mobile, use Chrome on Android and Safari on iOS, plus an emulator or real device for each.</p>
+
+    <p>If you can't run all those browsers locally, use an online cross-browser tester — BrowserStack, LambdaTest, or Comparium — which lets you run your page against a farm of real browsers.</p>
+
+    <p>Separately from testing, <strong>validate</strong> your code. A validator checks your HTML and CSS against the official specifications. Valid code doesn't guarantee a beautiful page — but it guarantees the browser can <em>parse</em> your page correctly, which means any remaining problem is with your design, not your syntax.</p>
+
+    <p>The W3C runs free validators: <code>validator.w3.org</code> for HTML and <code>jigsaw.w3.org/css-validator</code> for CSS. For JavaScript, use <code>jshint.com</code> or an editor extension like ESLint. Modern editors will flag errors inline as you type — a huge timesaver.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Test in multiple browsers — never just one.</li>
+      <li>Use an online tester if you can't install every browser.</li>
+      <li>Validate HTML and CSS with the W3C's free tools.</li>
+      <li>Validate JavaScript with JSHint or ESLint.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Validate your <code>index.html</code> at <code>validator.w3.org</code>. Did it pass?</li>
+      <li>Deliberately remove a closing tag. Validate again. What error do you get?</li>
+      <li>Run your JavaScript through JSHint. Do you see any warnings?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Three</button>
+    <button class="nav-button" data-nav="next">Enter Book Two →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOK 2 DIVIDER — LEARNING HTML BASICS
+     ============================================================ -->
+<section class="book-page cover-page part-page part-two" id="book-two">
+  <div class="cover-content">
+    <p class="part-number">Book Two</p>
+    <h1>Learning HTML Basics</h1>
+    <p class="part-desc">Every element you'll use on every page: headings, links, lists, images, media, tables, forms, and the semantics that make your pages accessible.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter Five →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 5 — STRUCTURING THE PAGE
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-structure">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Two · Learning HTML Basics · Chapter Five</p>
+    <h2>Building Good Bones: Structuring the Page</h2>
+    <p class="chapter-tagline">Paragraphs, headings, breaks, and the semantics of page layout.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Plain text pasted into an HTML file comes out as one undifferentiated blob. HTML's first job is to give that text structure — to tell the browser what each chunk of content <em>is</em>.</p>
+
+    <p>The simplest structure is the paragraph, created with <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code>. The six heading tags — <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> — create a hierarchy from most important to least. A line break <code>&lt;br&gt;</code> forces a new line without paragraph spacing; a horizontal rule <code>&lt;hr&gt;</code> draws a line across the page to mark a thematic break.</p>
+
+    <p>Then come the <strong>semantic</strong> page elements — the tags that describe page regions rather than text chunks. <code>&lt;header&gt;</code> holds the site title and logo. <code>&lt;nav&gt;</code> holds the navigation links. <code>&lt;main&gt;</code> holds the page's primary content. <code>&lt;article&gt;</code> holds a self-contained composition. <code>&lt;section&gt;</code> holds a thematic chunk of an article. <code>&lt;aside&gt;</code> holds tangential content — a sidebar or pull quote. <code>&lt;footer&gt;</code> holds contact info and copyright. And <code>&lt;div&gt;</code> is a generic, non-semantic container for anything else.</p>
+
+    <pre class="code-example"><code>&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;My Site&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;nav&gt;
+    &lt;a href="/"&gt;Home&lt;/a&gt;
+    &lt;a href="/about"&gt;About&lt;/a&gt;
+  &lt;/nav&gt;
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;A Post&lt;/h2&gt;
+      &lt;p&gt;Some text.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;&amp;copy; 2027&lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+
+    <p>Finally, comment your code. HTML comments use <code>&lt;!-- ... --&gt;</code> and are ignored by the browser, but invaluable to the human (often future-you) reading the source. Use comments to explain <em>why</em> something is the way it is, not just what it is.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Use <code>&lt;p&gt;</code> for paragraphs, <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code> for headings, <code>&lt;br&gt;</code> for line breaks, <code>&lt;hr&gt;</code> for thematic breaks.</li>
+      <li>Semantic tags — <code>header</code>, <code>nav</code>, <code>main</code>, <code>article</code>, <code>section</code>, <code>aside</code>, <code>footer</code> — describe the region of a page.</li>
+      <li>Use <code>&lt;div&gt;</code> only when no semantic tag fits.</li>
+      <li>Comment your HTML with <code>&lt;!-- ... --&gt;</code>.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Build a page with a header, nav, main, one article with two sections, and a footer.</li>
+      <li>Add an <code>&lt;hr&gt;</code> between two sections of the article.</li>
+      <li>Add an HTML comment above your <code>&lt;nav&gt;</code> explaining what its links do.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Book Two</button>
+    <button class="nav-button" data-nav="next">Chapter Six →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 6 — LINKS, LISTS, AND TEXT TIDBITS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-text-tidbits">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Two · Learning HTML Basics · Chapter Six</p>
+    <h2>Adding Links, Lists, and Other Text Tidbits</h2>
+    <p class="chapter-tagline">Emphasis, quotation, links, lists, and the small tags that carry big meaning.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>HTML has an entire vocabulary for marking up text with meaning. Use <code>&lt;em&gt;</code> for stress (browsers render it italic) and <code>&lt;strong&gt;</code> for importance (browsers render it bold). These are semantic — they describe the <em>reason</em> for the styling, not just the styling itself.</p>
+
+    <p>For quotations, use <code>&lt;blockquote&gt;</code> for the long, indented type and <code>&lt;q&gt;</code> for short quotes that live inside a sentence. For links, the element is <code>&lt;a&gt;</code> with an <code>href</code> attribute pointing at the destination:</p>
+
+    <pre class="code-example"><code>&lt;a href="https://www.w3.org/"&gt;The W3C&lt;/a&gt;</code></pre>
+
+    <p>You can also link within a page by giving any element an <code>id</code> attribute and pointing your <code>&lt;a&gt;</code> at <code>#that-id</code>.</p>
+
+    <p>For lists, use <code>&lt;ul&gt;</code> for bulleted (unordered) lists and <code>&lt;ol&gt;</code> for numbered (ordered) lists. Inside, each item is wrapped in <code>&lt;li&gt;</code>. For name-value pairs — definitions, glossaries, term sheets — use a description list: <code>&lt;dl&gt;</code>, with <code>&lt;dt&gt;</code> for the term and <code>&lt;dd&gt;</code> for the description.</p>
+
+    <p>And do get to know the small semantic tags: <code>&lt;abbr&gt;</code> for abbreviations, <code>&lt;code&gt;</code> for snippets of code, <code>&lt;kbd&gt;</code> for keyboard input, <code>&lt;mark&gt;</code> for highlighted text, <code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code> for subscript and superscript, <code>&lt;s&gt;</code> for struck-through text, and <code>&lt;pre&gt;</code> for text that needs whitespace preserved. They cost nothing, and they give your page meaning that search engines, screen readers, and future-you can use.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;em&gt;</code> for stress, <code>&lt;strong&gt;</code> for importance — semantic, not just visual.</li>
+      <li>Links use <code>&lt;a href="..."&gt;</code>; internal links target <code>#id</code>.</li>
+      <li>Lists: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>, plus <code>&lt;dl&gt;/&lt;dt&gt;/&lt;dd&gt;</code> for name-value pairs.</li>
+      <li>Many small tags (<code>abbr</code>, <code>code</code>, <code>kbd</code>, <code>mark</code>, <code>sub</code>, <code>sup</code>) add meaning cheaply.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Build a bulleted list of three favourite books, with each title marked up in <code>&lt;em&gt;</code>.</li>
+      <li>Add a numbered list of five steps for something you do every morning.</li>
+      <li>Create a description list with three terms and their definitions.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Five</button>
+    <button class="nav-button" data-nav="next">Chapter Seven →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 7 — IMAGES, VIDEO, AND OTHER MEDIA
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-media">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Two · Learning HTML Basics · Chapter Seven</p>
+    <h2>Working with Images, Video, and Other Media</h2>
+    <p class="chapter-tagline">Bringing pictures, sound, and motion into your page.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>To place an image on a page, use the <code>&lt;img&gt;</code> element — and always include an <code>alt</code> attribute describing what the image shows:</p>
+
+    <pre class="code-example"><code>&lt;img src="images/flower.jpg"
+     alt="A macro photo of an ant on a flower"
+     title="Flower and Ant"&gt;</code></pre>
+
+    <p>The <code>src</code> gives the path to the image file. The <code>alt</code> gives a text alternative read by screen readers, shown when images fail to load, and used by search engines. The optional <code>title</code> gives a tooltip on hover.</p>
+
+    <p>For images that need a caption, wrap the image in <code>&lt;figure&gt;</code> and the caption in <code>&lt;figcaption&gt;</code>. For clickable images, wrap the whole <code>&lt;img&gt;</code> in an <code>&lt;a&gt;</code> tag. To align an image vertically with surrounding text, use CSS's <code>vertical-align</code> property.</p>
+
+    <p>For video, use the <code>&lt;video&gt;</code> element. For content from YouTube, Vimeo, or Dailymotion, use their embed code — usually an <code>&lt;iframe&gt;</code> pointing at the video URL. For your own video files, use:</p>
+
+    <pre class="code-example"><code>&lt;video src="videos/bear.mp4"
+       poster="images/bear.png"
+       width="640" height="480"
+       controls
+       loop&gt;
+&lt;/video&gt;</code></pre>
+
+    <p>The <code>controls</code> attribute shows the play/pause/volume bar; <code>poster</code> shows a still image before playback; <code>loop</code> restarts when the video ends; <code>autoplay</code> starts automatically. For multiple formats, use <code>&lt;source&gt;</code> elements — the browser picks the first one it can play.</p>
+
+    <p>For audio, the pattern is nearly identical, with the <code>&lt;audio&gt;</code> element and MP3 files as the safe default.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Insert images with <code>&lt;img src="..." alt="..."&gt;</code> — always include alt text.</li>
+      <li>Use <code>figure</code> and <code>figcaption</code> for images that need captions.</li>
+      <li>Embed third-party video with the provider's <code>&lt;iframe&gt;</code> code; use <code>&lt;video&gt;</code> for your own files.</li>
+      <li>Audio uses the same pattern with <code>&lt;audio&gt;</code> and MP3.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add an image to your page with both <code>src</code> and <code>alt</code>.</li>
+      <li>Wrap the image in a <code>&lt;figure&gt;</code> with a <code>&lt;figcaption&gt;</code>.</li>
+      <li>Embed a YouTube video using the provider's share/embed code.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Six</button>
+    <button class="nav-button" data-nav="next">Chapter Eight →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 8 — TABLES
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-tables">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Two · Learning HTML Basics · Chapter Eight</p>
+    <h2>Building Tables with Your Bare Hands</h2>
+    <p class="chapter-tagline">Rows, columns, headers, captions, and the fine art of making data readable.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>When your data is naturally tabular — rows of records, columns of fields — HTML's table elements exist to display it. A table is built from a container <code>&lt;table&gt;</code>, sections <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>, rows <code>&lt;tr&gt;</code>, header cells <code>&lt;th&gt;</code>, and data cells <code>&lt;td&gt;</code>.</p>
+
+    <pre class="code-example"><code>&lt;table&gt;
+  &lt;caption&gt;Funny Food-Based Town Names&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Town&lt;/th&gt;
+      &lt;th&gt;State&lt;/th&gt;
+      &lt;th&gt;Population&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Candy Kitchen&lt;/td&gt;&lt;td&gt;New Mexico&lt;/td&gt;&lt;td&gt;59&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Hot Coffee&lt;/td&gt;&lt;td&gt;Mississippi&lt;/td&gt;&lt;td&gt;2,586&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+    <p>Style tables with a little CSS: <code>border-collapse: collapse</code> removes the double borders; <code>padding</code> gives cells breathing room; <code>text-align</code> and <code>vertical-align</code> position content within cells. Use <code>caption-side: bottom</code> to move the caption below the table.</p>
+
+    <p>One important modern rule: <strong>never use tables for page layout</strong>. That technique died years ago — CSS Grid and Flexbox (Book Five) handle layout far better, and tables used for layout wreak havoc on accessibility.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Tables have <code>table</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code>, <code>td</code>, and <code>caption</code>.</li>
+      <li>Use <code>th</code> for headers, <code>td</code> for data.</li>
+      <li>Style with <code>border-collapse</code>, <code>padding</code>, and alignment properties.</li>
+      <li>Use tables for data — never for page layout.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Build a table of your three favourite films, with columns for title, year, and director.</li>
+      <li>Add a <code>&lt;caption&gt;</code> describing the table.</li>
+      <li>Style the table with collapsed borders and 8-pixel cell padding.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Seven</button>
+    <button class="nav-button" data-nav="next">Chapter Nine →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 9 — FORMS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-forms">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Two · Learning HTML Basics · Chapter Nine</p>
+    <h2>Using Forms to Make a Page Interactive</h2>
+    <p class="chapter-tagline">Text fields, checkboxes, radio buttons, dropdowns, and pickers.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>A form is the web page's way of gathering input. It lives inside a <code>&lt;form&gt;</code> element and consists of fields — text inputs, checkboxes, radio buttons, dropdowns — plus a submit button.</p>
+
+    <p>The <code>&lt;input&gt;</code> element, with its <code>type</code> attribute, covers most of the ground. <code>type="text"</code> gives a single-line text box. <code>type="email"</code>, <code>type="url"</code>, and <code>type="tel"</code> give validation-aware boxes. <code>type="number"</code> gives a spin box. <code>type="password"</code> masks its input. <code>type="search"</code>, <code>type="date"</code>, <code>type="time"</code>, and <code>type="color"</code> give you specialised controls. <code>type="checkbox"</code> and <code>type="radio"</code> give toggles and single-choice groups.</p>
+
+    <pre class="code-example"><code>&lt;form&gt;
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input id="email" type="email" name="email"
+         placeholder="you@example.com"&gt;
+
+  &lt;label&gt;
+    &lt;input type="checkbox" name="subscribe"&gt;
+    Subscribe to the newsletter
+  &lt;/label&gt;
+
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+    <p>Pair every field with a <code>&lt;label&gt;</code> — either wrapping the field or referring to it via <code>for</code> and <code>id</code> — so screen readers know what each field means and users can click the label to focus the input.</p>
+
+    <p>For longer text, use <code>&lt;textarea&gt;</code>. For dropdowns, use <code>&lt;select&gt;</code> with <code>&lt;option&gt;</code> children. For grouping related fields, use <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> caption.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Wrap fields in a <code>&lt;form&gt;</code> and end with a submit button.</li>
+      <li>Use <code>&lt;input type="..."&gt;</code> for most fields; use <code>textarea</code> for long text.</li>
+      <li>Always pair fields with <code>&lt;label&gt;</code> — for accessibility and usability.</li>
+      <li>Use <code>fieldset</code> and <code>legend</code> to group related fields.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Build a form with a name field, an email field, and a submit button.</li>
+      <li>Add a group of three radio buttons for "small / medium / large".</li>
+      <li>Add a textarea for comments and a checkbox for "agree to terms".</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Eight</button>
+    <button class="nav-button" data-nav="next">Chapter Ten →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 10 — ACCESSIBILITY
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-accessible">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Two · Learning HTML Basics · Chapter Ten</p>
+    <h2>Making Your Web Pages Accessible</h2>
+    <p class="chapter-tagline">Designing for everyone, not just for people like you.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Accessibility is the practice of building pages that every visitor can use — including the one billion people worldwide who live with some form of disability. Access to the web is a right, not a nicety, and accessible pages also rank better in search results, work better on slow connections, and cost you almost nothing extra to build.</p>
+
+    <p>People with visual impairments may use a screen reader — software that reads the page aloud. That software navigates a page by its <em>structure</em>: by its headings, its landmarks, its labels, its alt text. A page built with proper semantic HTML is automatically easier for a screen reader to navigate.</p>
+
+    <p>People with motor impairments may use a keyboard instead of a mouse. Test your pages with Tab and Shift+Tab and Enter. Every interactive element — links, buttons, form fields — should be reachable by keyboard.</p>
+
+    <p>People with cognitive impairments benefit from consistent layouts, clear instructions, and simple language. And people with colour-blindness or low vision benefit from sufficient contrast between text and background — aim for a contrast ratio of at least 4.5.</p>
+
+    <p>Many of the ARIA attributes — <code>role</code>, <code>aria-label</code>, <code>aria-labelledby</code> — exist to add accessibility information to elements that can't otherwise express it. Use them when semantic HTML isn't enough. Then, before you ship, run your page through <code>wave.webaim.org</code> — the Web Accessibility Evaluation Tool — to catch anything you missed.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Accessible pages work for people with visual, auditory, motor, and cognitive differences.</li>
+      <li>Use semantic HTML — it's the single biggest accessibility win.</li>
+      <li>Always include alt text, proper headings, and labelled form fields.</li>
+      <li>Ensure sufficient colour contrast and keyboard navigability.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Run your page through <code>wave.webaim.org</code>. What errors and warnings appear?</li>
+      <li>Navigate your page using only the Tab key. Can you reach every link and field?</li>
+      <li>Check your text colour against its background at <code>webaim.org/resources/contrastchecker</code>.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Nine</button>
+    <button class="nav-button" data-nav="next">Enter Book Three →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOK 3 DIVIDER — LEARNING CSS BASICS
+     ============================================================ -->
+<section class="book-page cover-page part-page part-three" id="book-three">
+  <div class="cover-content">
+    <p class="part-number">Book Three</p>
+    <h1>Learning CSS Basics</h1>
+    <p class="part-desc">The box model, selectors, pseudo-classes, colours, backgrounds, and the typography that makes text a pleasure to read.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter Eleven →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 11 — THE CSS BOX MODEL
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-box-model">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Three · Learning CSS Basics · Chapter Eleven</p>
+    <h2>Figuring Out the CSS Box Model</h2>
+    <p class="chapter-tagline">Content, padding, border, margin — the four rings of every element.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Every element on a page is surrounded by an invisible box. That box has four layers: the <strong>content</strong> (the text or image itself), the <strong>padding</strong> (space inside the box, between content and border), the <strong>border</strong> (the line drawn around the padding), and the <strong>margin</strong> (space outside the border, between this box and its neighbours).</p>
+
+    <pre class="code-example"><code>.card {
+  padding: 16px 20px;
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  border-radius: 8px;
+}</code></pre>
+
+    <p>Elements come in two flavours. <strong>Block</strong> elements (<code>p</code>, <code>div</code>, <code>h1</code>) start on new lines and fill the width of their parent. <strong>Inline</strong> elements (<code>a</code>, <code>span</code>, <code>em</code>) flow along with text. The <code>display</code> property flips between them — <code>display: inline-block</code> gets you the best of both, and <code>display: none</code> hides an element entirely.</p>
+
+    <p>By default, an element's <code>width</code> and <code>height</code> describe the <em>content</em> only — padding and border get added on top, which can blow past your intended total width. Fix that with <code>box-sizing: border-box</code>, which makes width include padding and border. Put it at the top of your stylesheet:</p>
+
+    <pre class="code-example"><code>* {
+  box-sizing: border-box;
+}</code></pre>
+
+    <p>One quirk to watch for: <strong>collapsing margins</strong>. When two vertical margins meet, the browser uses the <em>larger</em> of the two, not their sum. This can surprise you. The fix is usually to add padding, or to use Flexbox (Book Five), where margins don't collapse.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Every element is a box with content, padding, border, and margin.</li>
+      <li>Block elements stack; inline elements flow with text; <code>display</code> controls which.</li>
+      <li>Use <code>box-sizing: border-box</code> so width includes padding and border.</li>
+      <li>Vertical margins collapse — the larger one wins.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Give a <code>div</code> some padding, a border, and a margin. Inspect it in the dev tools to see the box model.</li>
+      <li>Add <code>* { box-sizing: border-box }</code> to your stylesheet and refresh.</li>
+      <li>Create two stacked elements with adjacent margins and observe the collapse.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Book Three</button>
+    <button class="nav-button" data-nav="next">Chapter Twelve →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 12 — CSS SELECTORS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-selectors">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Three · Learning CSS Basics · Chapter Twelve</p>
+    <h2>Getting to Know the CSS Selectors</h2>
+    <p class="chapter-tagline">Picking out exactly which elements get which styles.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>A CSS rule has two parts: a <strong>selector</strong> that identifies which elements to style, and a <strong>declaration block</strong> that lists the styles to apply. The selector is the targeting mechanism — the more precise it is, the more control you have.</p>
+
+    <p>The basic selectors are: <strong>type</strong> (<code>p</code>, <code>h1</code>) for every element of a kind; <strong>class</strong> (<code>.warning</code>) for every element with that class attribute; <strong>id</strong> (<code>#main-title</code>) for the one element with that id; and the <strong>universal</strong> selector (<code>*</code>) for every element on the page.</p>
+
+    <pre class="code-example"><code>p        { color: navy; }
+.warning { background: gold; }
+#hero    { font-size: 3rem; }
+h2.title { border-bottom: 2px solid; }</code></pre>
+
+    <p>You can also select based on <em>relationships</em>. The descendant combinator (a space) targets any element matching the right selector that lives inside the left selector: <code>article p</code> matches every paragraph inside any article. The child combinator (<code>&gt;</code>) matches only direct children: <code>nav &gt; a</code> matches links that are immediate children of a <code>nav</code>. The adjacent sibling combinator (<code>+</code>) matches the element immediately following another: <code>h2 + p</code> matches paragraphs that come right after a heading. The general sibling combinator (<code>~</code>) matches any later sibling: <code>h2 ~ ul</code> matches any list that comes after a heading in the same parent.</p>
+
+    <p>Attribute selectors match based on the presence or value of an attribute: <code>a[href^="https://"]</code> matches any link whose URL starts with HTTPS. <code>img[alt=""]</code> matches images with empty alt text. They're precise and often underused.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Basic selectors: type, class (<code>.</code>), id (<code>#</code>), universal (<code>*</code>).</li>
+      <li>Descendant (<code> </code>), child (<code>&gt;</code>), adjacent sibling (<code>+</code>), general sibling (<code>~</code>).</li>
+      <li>Attribute selectors match by the presence or value of attributes.</li>
+      <li>Combine selectors for precision: <code>h2.title</code> targets only <code>h2</code> elements with that class.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Style every <code>p</code> with a different font size, then every <code>.intro</code> with a larger one.</li>
+      <li>Style <code>nav &gt; a</code> with padding and no underline.</li>
+      <li>Use <code>h2 + p</code> to give the paragraph right after each heading a bold first word.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Eleven</button>
+    <button class="nav-button" data-nav="next">Chapter Thirteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 13 — PSEUDO-CLASSES AND PSEUDO-ELEMENTS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-pseudo">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Three · Learning CSS Basics · Chapter Thirteen</p>
+    <h2>Pseudo School: Learning Pseudo-Classes and Pseudo-Elements</h2>
+    <p class="chapter-tagline">Styling what's not on the page: states, positions, and generated content.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>A <strong>pseudo-class</strong> styles an element based on its <em>state</em> or <em>position</em> — things the HTML doesn't directly express. The <code>:hover</code> pseudo-class fires when the mouse is over the element. <code>:focus</code> fires when a keyboard focus is on it. <code>:visited</code> and <code>:link</code> target links you've clicked or not. <code>:first-child</code> and <code>:last-child</code> target position-based children. <code>:nth-child(even)</code> — famous for zebra-striping tables — targets every second child.</p>
+
+    <pre class="code-example"><code>a:hover           { color: hotpink; }
+input:focus       { outline: 2px solid teal; }
+tr:nth-child(even){ background: #f4f4f4; }
+p:first-of-type   { margin-top: 0; }</code></pre>
+
+    <p>Form-related pseudo-classes style fields based on their validation state: <code>:valid</code>, <code>:invalid</code>, <code>:required</code>, <code>:optional</code>, <code>:in-range</code>, <code>:out-of-range</code>, <code>:disabled</code>, <code>:enabled</code>, <code>:checked</code>.</p>
+
+    <p>A <strong>pseudo-element</strong> is different: it creates a fake element that doesn't exist in your HTML but can be styled with CSS. <code>::before</code> and <code>::after</code> create a first or last child inside a parent element. <code>::first-letter</code> styles the first letter of a block (for drop caps). <code>::first-line</code> styles the first line, however long it happens to be at the current viewport width.</p>
+
+    <pre class="code-example"><code>.external-link::after {
+  content: " ↗";
+  color: gray;
+}
+
+.article > p::first-letter {
+  font-size: 3rem;
+  float: left;
+  line-height: 0.85;
+  padding-right: 6px;
+}</code></pre>
+
+    <p>The <code>content</code> property must appear inside <code>::before</code> and <code>::after</code>, even if its value is the empty string. Don't put <em>essential</em> content in a pseudo-element — assistive technology may not read it.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Pseudo-classes (<code>:hover</code>, <code>:focus</code>, <code>:nth-child()</code>) style by state or position.</li>
+      <li>Form pseudo-classes style fields based on their current validation state.</li>
+      <li>Pseudo-elements (<code>::before</code>, <code>::after</code>, <code>::first-letter</code>) create fake sub-elements.</li>
+      <li>Never put essential content in a pseudo-element.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Style every link's <code>:hover</code> state with a new colour and underline.</li>
+      <li>Zebra-stripe a table using <code>:nth-child(even)</code>.</li>
+      <li>Give the first paragraph of an article a drop cap with <code>::first-letter</code>.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twelve</button>
+    <button class="nav-button" data-nav="next">Chapter Fourteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 14 — MAKING CSS MAKE SENSE
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-css-sense">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Three · Learning CSS Basics · Chapter Fourteen</p>
+    <h2>Making CSS Make Sense</h2>
+    <p class="chapter-tagline">Comments, resets, debugging, and the rules that govern which styles win.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Comment your CSS with <code>/* ... */</code>. Use comments to explain <em>why</em> a rule exists, and to mark out sections in a long stylesheet — general styles, typography, layout, component styles. Comments help future-you understand what present-you was thinking.</p>
+
+    <p>A <strong>CSS reset</strong> is a small stylesheet added at the top that overrides the browser's default styles. Different browsers used to disagree wildly about things like heading sizes and list spacing; the popular reset <code>normalize.css</code> smooths most of those over while preserving useful defaults. Load it before your own styles:</p>
+
+    <pre class="code-example"><code>&lt;link rel="stylesheet" href="css/normalize.css"&gt;
+&lt;link rel="stylesheet" href="css/styles.css"&gt;</code></pre>
+
+    <p>When CSS doesn't behave the way you expect, open the browser's dev tools (F12 or Cmd-Option-I). Right-click any element and choose <em>Inspect</em>. The <em>Styles</em> panel shows every rule applying to that element, in order of importance — strikethrough means overridden. The <em>Computed</em> panel shows the final values the browser has calculated after all the cascading.</p>
+
+    <p>The <strong>cascade</strong> is the algorithm the browser uses to decide, when several rules try to style the same property, which one wins. Three factors determine it, in order: <strong>origin and importance</strong> (author vs. user vs. browser; normal vs. <code>!important</code>), <strong>specificity</strong> (how narrow the selector is), and <strong>source order</strong> (the later rule wins when everything else ties). Specificity breaks into three buckets: IDs, classes/pseudo-classes/attributes, and element types. Higher bucket wins; if buckets tie, later rule wins.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Comment your CSS and organize it into sections.</li>
+      <li>Load a reset like <code>normalize.css</code> before your own styles.</li>
+      <li>Use the browser's dev tools to inspect which rules apply.</li>
+      <li>The cascade resolves conflicts by importance, specificity, then source order.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add section-marker comments to your stylesheet.</li>
+      <li>Download <code>normalize.css</code> and link it before your main stylesheet.</li>
+      <li>Right-click a paragraph in your page and study its Styles panel. Which rule wins a specific property, and why?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Thirteen</button>
+    <button class="nav-button" data-nav="next">Chapter Fifteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 15 — MEASURING CSS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-measure">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Three · Learning CSS Basics · Chapter Fifteen</p>
+    <h2>Taking the Measure of CSS</h2>
+    <p class="chapter-tagline">Pixels, percentages, ems, rems, and the viewport units.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>CSS needs units, and it has quite a few. The most common are <strong>px</strong> (pixels), <strong>%</strong> (percentages), <strong>em</strong> (relative to the current element's font size), <strong>rem</strong> (relative to the root element's font size), and the viewport units <strong>vw</strong>, <strong>vh</strong>, <strong>vmin</strong>, and <strong>vmax</strong> (1/100 of the viewport's width, height, smaller dimension, larger dimension).</p>
+
+    <p>Which to use? For fonts, use <code>rem</code> — never <code>px</code>. Pixels override the user's own font-size preference, which is an accessibility failure. <code>rem</code> respects it. For spacing (margins and padding), <code>rem</code> keeps proportions consistent with the text. For layout width, use percentages or viewport units so the layout adapts to the screen.</p>
+
+    <p>You can also perform calculations in CSS with <code>calc()</code>:</p>
+
+    <pre class="code-example"><code>article {
+  width: calc(100% - 15rem);
+}</code></pre>
+
+    <p>And you can clamp a value between a minimum and maximum — very useful for fluid typography:</p>
+
+    <pre class="code-example"><code>body {
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+}</code></pre>
+
+    <p>Other functions — <code>min()</code>, <code>max()</code> — let you choose the smallest or largest of a set of values. Together they turn CSS from a fixed grid of numbers into a responsive system that does much of the adapting for you.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Use <code>rem</code> for fonts and spacing; use percentages or viewport units for layout.</li>
+      <li>Never set font sizes in <code>px</code> — it breaks the user's font-size preference.</li>
+      <li><code>calc()</code> lets you combine units with arithmetic.</li>
+      <li><code>clamp()</code>, <code>min()</code>, and <code>max()</code> keep measurements within bounds.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Change a pixel font size to a <code>rem</code> value.</li>
+      <li>Use <code>calc()</code> to make an element 100% wide minus 40 pixels.</li>
+      <li>Use <code>clamp()</code> to keep a heading between 1.5rem and 3rem.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Fourteen</button>
+    <button class="nav-button" data-nav="next">Chapter Sixteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 16 — COLORS AND BACKGROUNDS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-colors-bg">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Three · Learning CSS Basics · Chapter Sixteen</p>
+    <h2>Fancifying Pages with Colors and Backgrounds</h2>
+    <p class="chapter-tagline">Naming, mixing, and layering colour — plus gradients.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>CSS accepts colour in several forms. Use <strong>keywords</strong> like <code>tomato</code>, <code>steelblue</code>, <code>rebeccapurple</code> for quick picks. Use <strong>RGB codes</strong> (<code>#ff6347</code>) or the <strong>rgb()</strong> function (<code>rgb(255 99 71)</code>) for precise mixing. Use <strong>hsl()</strong> (<code>hsl(9deg 100% 64%)</code>) when you want to reason about hue, saturation, and lightness — which is much easier than reasoning about red-green-blue mixes.</p>
+
+    <pre class="code-example"><code>.alert {
+  color: #ff6347;
+  background-color: hsl(9deg 100% 96%);
+  border-left: 4px solid tomato;
+}</code></pre>
+
+    <p>For backgrounds, use <code>background-color</code> for a flat colour, or <code>background-image</code> for a picture. To layer multiple backgrounds (a logo on top of a photo), separate them with commas — the first is on top. Control the position, size, and repeat with <code>background-position</code>, <code>background-size</code>, and <code>background-repeat</code>.</p>
+
+    <p>Gradients are generated images. <code>linear-gradient()</code> runs in a straight line; <code>radial-gradient()</code> radiates from a point; <code>conic-gradient()</code> rotates around a centre. You can stack colour stops to define where each colour appears:</p>
+
+    <pre class="code-example"><code>.hero {
+  background: linear-gradient(135deg,
+    #c8553d 0%,
+    #d4a94e 50%,
+    #2a7f7a 100%);
+}</code></pre>
+
+    <p>Whatever colour scheme you choose, respect contrast — aim for at least 4.5:1 between text and its background. The browser's dev-tools colour picker will show you the ratio as you adjust the swatch.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Colours can be keyword, hex, <code>rgb()</code>, or <code>hsl()</code> — pick whichever is clearest for the job.</li>
+      <li>Backgrounds can be colours, images, gradients, or layers of all three.</li>
+      <li><code>linear-gradient()</code>, <code>radial-gradient()</code>, and <code>conic-gradient()</code> generate decorative images.</li>
+      <li>Always verify contrast — aim for at least 4.5:1.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Give a <code>div</code> an <code>hsl()</code> background and a matching darker border.</li>
+      <li>Apply a two-colour linear gradient to your hero section.</li>
+      <li>Check your text/background contrast with the dev-tools colour picker.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Fifteen</button>
+    <button class="nav-button" data-nav="next">Chapter Seventeen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 17 — TYPOGRAPHY
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-typography">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Three · Learning CSS Basics · Chapter Seventeen</p>
+    <h2>Taking Your Text Up a Notch with Web Typography</h2>
+    <p class="chapter-tagline">Typefaces, sizes, line heights, and the trinity that makes text a pleasure.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Most of the appeal of a well-designed page comes from typography — not from dramatic imagery, but from getting the small things right. A <strong>typeface</strong> (Helvetica) is a design; a <strong>font</strong> (16pt bold Helvetica) is a specific instance. CSS calls the typeface a <strong>font family</strong>, set with <code>font-family</code>.</p>
+
+    <pre class="code-example"><code>body {
+  font-family: Georgia, "Times New Roman", serif;
+}</code></pre>
+
+    <p>Provide a <strong>font stack</strong> — a comma-separated list of candidates, ending with a generic keyword (<code>serif</code>, <code>sans-serif</code>, <code>monospace</code>). The browser uses the first one available. For greater variety and consistency, use <strong>web fonts</strong> from a provider like Google Fonts — a single <code>&lt;link&gt;</code> tag in your <code>&lt;head&gt;</code> pulls in the font, and your <code>font-family</code> picks it up.</p>
+
+    <p>Then get three things right — the <strong>typographic trinity</strong>: <em>size</em>, <em>line height</em>, and <em>line length</em>. Set body text at least 1rem (16px), larger if you like — most websites are set too small. Set <code>line-height</code> around 1.5 for readability. Keep line length between 45 and 75 characters, which you can achieve with <code>max-width: 65ch</code>.</p>
+
+    <pre class="code-example"><code>p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 65ch;
+  margin: 0 auto 1.5em;
+}</code></pre>
+
+    <p>Then the supporting cast: <code>font-weight</code> for bold or light, <code>font-style: italic</code> for slant, <code>letter-spacing</code> for tracking, <code>text-transform</code> for caps (but never use it to fake headings), <code>text-align</code> for alignment, and <code>hyphens: auto</code> to help justified text. Style links carefully so they stand out from body text; underlined is the safest default.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Set <code>font-family</code> to a stack ending in a generic keyword.</li>
+      <li>Web fonts from Google Fonts give more choice than system fonts.</li>
+      <li>The typographic trinity: size (≥1rem), line height (≈1.5), line length (45–75 characters).</li>
+      <li>Style links to stand out from body text.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Link a Google Font and apply it to your page's body text.</li>
+      <li>Set a <code>max-width</code> of <code>65ch</code> on your paragraphs.</li>
+      <li>Adjust your <code>line-height</code> and compare 1.2, 1.5, and 1.8.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Sixteen</button>
+    <button class="nav-button" data-nav="next">Enter Book Four →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOK 4 DIVIDER — BUILDING DYNAMIC PAGES WITH JAVASCRIPT
+     ============================================================ -->
+<section class="book-page cover-page part-page part-four" id="book-four">
+  <div class="cover-content">
+    <p class="part-number">Book Four</p>
+    <h1>Building Dynamic Pages with JavaScript</h1>
+    <p class="part-desc">Variables, expressions, flow, functions, the DOM, arrays, strings, storage, debugging, and the form data that brings pages to life.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter Eighteen →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 18 — JAVASCRIPT BIRD'S-EYE VIEW
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-js-bird-eye">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · Building Dynamic Pages · Chapter Eighteen</p>
+    <h2>JavaScript: The Bird's-Eye View</h2>
+    <p class="chapter-tagline">What it does, how it fits, and how to add it to a page.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>JavaScript is a full programming language that runs inside the browser. HTML describes content; CSS styles it; JavaScript <em>controls</em> it. With JavaScript you can respond to user actions, modify the page as it's displayed, request data from servers, and validate form input before it's sent.</p>
+
+    <p>You attach JavaScript to a page in three ways: an attribute on an element, an inline <code>&lt;script&gt;</code> block, or an external file — the last being cleanest:</p>
+
+    <pre class="code-example"><code>&lt;script src="scripts/main.js"&gt;&lt;/script&gt;</code></pre>
+
+    <p>The browser runs a page's JavaScript in order, one statement at a time. Statements end with semicolons (technically optional, best to include). Comments use <code>//</code> for one line, or <code>/* ... */</code> for a block. Everything between statements that JavaScript ignores is there to help the human reader.</p>
+
+    <p>For testing, the browser's <strong>Console</strong> (F12, then Console tab) is your best friend. Type a snippet and press Enter; the result appears below. Use <code>console.log()</code> from your script to leave notes for yourself in the same place.</p>
+
+    <pre class="code-example"><code>console.log("Hello from JavaScript!");
+// The Console prints the message and returns undefined (which is fine).</code></pre>
+
+    <p>JavaScript is a client-side language — it runs on the user's browser, not the server. That means it can't read files from your computer, can't see other sites' cookies, and can't touch the server's databases directly. That last part is handled by the server, in languages like PHP or Python — which is beyond this book's scope.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>JavaScript is a full programming language that runs in the browser.</li>
+      <li>Add it via an attribute, an inline block, or an external file.</li>
+      <li>Comments explain; the browser ignores them.</li>
+      <li>The Console is the fastest place to test and log.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add a script file to your page and put one <code>console.log("Loaded!")</code> in it.</li>
+      <li>Open the Console. Do you see the message?</li>
+      <li>Try typing <code>2 + 2</code> in the Console and pressing Enter.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Book Four</button>
+    <button class="nav-button" data-nav="next">Chapter Nineteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 19 — UNDERSTANDING VARIABLES
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-variables">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · Building Dynamic Pages · Chapter Nineteen</p>
+    <h2>Understanding Variables</h2>
+    <p class="chapter-tagline">Named containers for values — the memory of your scripts.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>A <strong>variable</strong> is a named box in the computer's memory that holds a value. Declare one with <code>let</code> (if the value will change) or <code>const</code> (if it won't). To assign a value, use <code>=</code>.</p>
+
+    <pre class="code-example"><code>let score = 0;
+const player = "Ada";
+score = score + 10;</code></pre>
+
+    <p>Variables come in a few <strong>data types</strong>: numbers (<code>42</code>, <code>3.14</code>, <code>-7</code>), strings (<code>"hello"</code>, <code>'hello'</code>, <code>`hello`</code>), Booleans (<code>true</code> or <code>false</code>), and others like <code>undefined</code>, <code>null</code>, and objects. Strings can hold any text; escape sequences like <code>\n</code> put line breaks inside them.</p>
+
+    <p>To name a variable, follow a few rules: start with a letter or underscore, then any combination of letters, digits, and underscores. No spaces, no reserved words (like <code>let</code>, <code>if</code>, <code>function</code>). Names are <em>case-sensitive</em>. Good variable names are descriptive: <code>accountBalance</code> beats <code>x</code>. Convention in JavaScript is <strong>camelCase</strong> — start lowercase, capitalize the start of each subsequent word.</p>
+
+    <pre class="code-example"><code>let userFirstName = "Ada";
+let userAge = 12;
+const maxRetries = 3;</code></pre>
+
+    <p>Prefer <code>const</code> by default; use <code>let</code> only when the value must change. Avoid <code>var</code> in new code — it has odd scoping rules that <code>let</code> and <code>const</code> fixed.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Declare with <code>let</code> (mutable) or <code>const</code> (immutable binding).</li>
+      <li>Types: numbers, strings, Booleans, and more.</li>
+      <li>Names: letters, digits, underscores; no spaces, no reserved words; case-sensitive.</li>
+      <li>Prefer descriptive camelCase names.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Declare a <code>const</code> with your name and a <code>let</code> with your age.</li>
+      <li>Log both to the Console.</li>
+      <li>Try to change the <code>const</code>. What error do you get?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Eighteen</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 20 — BUILDING EXPRESSIONS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-expressions">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · Building Dynamic Pages · Chapter Twenty</p>
+    <h2>Building Expressions</h2>
+    <p class="chapter-tagline">Arithmetic, comparison, and logic — the operations that make values talk.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>An <strong>expression</strong> is a piece of code that produces a value. Its raw materials are <strong>operands</strong> (values) and its tools are <strong>operators</strong> (symbols that combine operands).</p>
+
+    <p>Arithmetic expressions combine numbers: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code> (remainder). The <code>+</code> operator doubles as string concatenation, so <code>"Hello, " + "world"</code> produces <code>"Hello, world"</code>. Watch out for that: JavaScript will convert numbers to strings if the left side of a <code>+</code> is a string.</p>
+
+    <pre class="code-example"><code>const tip = 100 * 0.15;         // 15
+const total = 100 + tip;        // 115
+const greeting = "Hi, " + "Ada"; // "Hi, Ada"</code></pre>
+
+    <p><strong>Comparison</strong> expressions use <code>==</code>, <code>===</code>, <code>!=</code>, <code>!==</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>. Prefer the strict forms (<code>===</code>, <code>!==</code>) — they check type as well as value. <code>"5" === 5</code> is <code>false</code>; <code>"5" == 5</code> is <code>true</code>. The loose forms cause subtle bugs; avoid them.</p>
+
+    <pre class="code-example"><code>"5" === 5   // false
+"5" == 5    // true
+10 > 4      // true
+"a" &lt; "B"   // false (uppercase precedes lowercase in Unicode)</code></pre>
+
+    <p><strong>Logical</strong> expressions combine Booleans. <code>&amp;&amp;</code> (AND) is true only if both sides are true. <code>||</code> (OR) is true if either side is true. <code>!</code> (NOT) flips the value.</p>
+
+    <pre class="code-example"><code>true &amp;&amp; false   // false
+true || false   // true
+!true           // false</code></pre>
+
+    <p>When several operators share an expression, JavaScript applies them in order of <strong>precedence</strong>: arithmetic first, then comparison, then logic. Parentheses override everything, and a good habit is to add them whenever precedence isn't immediately obvious — for clarity, if nothing else.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Expressions combine operands with operators to produce a value.</li>
+      <li>Prefer <code>===</code> and <code>!==</code> over the loose forms.</li>
+      <li><code>&amp;&amp;</code>, <code>||</code>, <code>!</code> are AND, OR, and NOT.</li>
+      <li>Parentheses override precedence; use them when in doubt.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Log <code>2 + 3 * 4</code> and <code>(2 + 3) * 4</code>. Compare.</li>
+      <li>Test <code>"10" === 10</code> and <code>"10" == 10</code> in the Console.</li>
+      <li>Write an expression that's true only if two Booleans are both true.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Nineteen</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-One →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 21 — CONTROLLING THE FLOW
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-flow">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · Building Dynamic Pages · Chapter Twenty-One</p>
+    <h2>Controlling the Flow of JavaScript</h2>
+    <p class="chapter-tagline">If this, then that. While this, do that.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>By default, JavaScript runs top to bottom. But <strong>control structures</strong> let you make the flow branch and repeat.</p>
+
+    <p>The <code>if</code> statement runs a block of code only if a condition is true. The <code>else</code> branch runs when it isn't. Chain <code>else if</code> to test multiple conditions in order. For many discrete cases, <code>switch</code> is clearer and less error-prone:</p>
+
+    <pre class="code-example"><code>let greeting;
+const hour = new Date().getHours();
+
+if (hour &lt; 12) {
+  greeting = "Good morning";
+} else if (hour &lt; 18) {
+  greeting = "Good afternoon";
+} else {
+  greeting = "Good evening";
+}</code></pre>
+
+    <p>Loops repeat a block. <code>while</code> repeats as long as a condition is true. <code>do…while</code> runs at least once, then tests. <code>for</code> bundles three things — where to start, when to stop, how to change — into one line:</p>
+
+    <pre class="code-example"><code>for (let i = 1; i &lt;= 5; i++) {
+  console.log("Round " + i);
+}</code></pre>
+
+    <p>Inside a loop, <code>break</code> exits early; <code>continue</code> skips the rest of the current iteration and moves to the next. Both are occasionally useful, but if you find yourself reaching for them often, look for a simpler structure.</p>
+
+    <p>The danger in every loop is the <strong>infinite loop</strong> — a loop whose condition never becomes false. It will freeze the browser tab. Always make sure something inside the loop changes the value that the condition checks. If a page hangs and asks "Stop script?", you've found one.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>if / else if / else</code> branch on condition. <code>switch</code> handles many discrete cases.</li>
+      <li><code>while</code> and <code>do…while</code> loop on condition; <code>for</code> bundles counter and condition.</li>
+      <li><code>break</code> exits a loop; <code>continue</code> skips to the next iteration.</li>
+      <li>Infinite loops freeze the page — always update the condition inside the loop.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write an <code>if/else</code> that prints "Even" or "Odd" based on a number.</li>
+      <li>Loop from 1 to 20, printing only the even numbers (<code>i % 2 === 0</code>).</li>
+      <li>Write a <code>while</code> loop that counts down from 5 to 1 and prints "Blast off!".</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-Two →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 22 — FUNCTIONS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-functions">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · Building Dynamic Pages · Chapter Twenty-Two</p>
+    <h2>Harnessing the Power of Functions</h2>
+    <p class="chapter-tagline">Write it once. Call it as often as you like.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>A <strong>function</strong> is a named block of code that runs only when you call it. Functions can accept <strong>parameters</strong> (inputs) and <strong>return</strong> a value (output). They're the primary tool for avoiding repetition.</p>
+
+    <pre class="code-example"><code>function square(x) {
+  return x * x;
+}
+
+console.log(square(4)); // 16
+console.log(square(7)); // 49</code></pre>
+
+    <p>You can call a function from anywhere it's in scope. Pass values as arguments in the parentheses. Use <code>return</code> to hand a value back to the caller; without it, a function returns <code>undefined</code>.</p>
+
+    <p>Functions can also exist <strong>anonymously</strong> — with no name. This is useful when the function will be used only once, as a callback passed to another function. Since ES2015, anonymous functions have a shorter form called an <strong>arrow function</strong>:</p>
+
+    <pre class="code-example"><code>const square = (x) => x * x;
+
+// Passing a callback
+[1, 2, 3].forEach((n) => console.log(n * 2));</code></pre>
+
+    <p><strong>Scope</strong> governs where variables are visible. Variables declared inside a function belong to that function; they can't be seen from outside. Declare them outside any function and they become <strong>global</strong> — visible everywhere. Prefer local scope. Globals leak, collide, and make code harder to reason about.</p>
+
+    <p><strong>Recursion</strong> is a function calling itself. It's a powerful technique for problems that break into smaller subproblems, but every recursive function needs a stopping condition — otherwise you'll blow the stack.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Functions bundle reusable code and can accept inputs and return values.</li>
+      <li>Arrow functions (<code>=&gt;</code>) are a compact form for anonymous functions.</li>
+      <li>Variables declared inside a function have local scope; those outside have global scope.</li>
+      <li>Recursion needs a stopping condition.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a function that returns the larger of two numbers.</li>
+      <li>Rewrite it as an arrow function.</li>
+      <li>Write a recursive function that computes the sum of 1 to n.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-One</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-Three →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 23 — THE DOM
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-dom">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · Building Dynamic Pages · Chapter Twenty-Three</p>
+    <h2>Playing with the Document Object Model</h2>
+    <p class="chapter-tagline">Selecting, changing, creating, and reacting — the web page as a data structure.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <strong>Document Object Model</strong> (DOM) is the browser's representation of your page as a tree of objects. Every HTML element is a node; every attribute and every piece of text is a node. JavaScript can read from and write to this tree, changing the page after it's been loaded.</p>
+
+    <p>To work with an element, you must first <strong>select</strong> it. The modern, CSS-flavoured way:</p>
+
+    <pre class="code-example"><code>const heading = document.querySelector("h1");
+const allLinks = document.querySelectorAll("nav a");
+const byId = document.getElementById("main-title");</code></pre>
+
+    <p>To <strong>change</strong> an element, set one of its properties. <code>textContent</code> replaces its text; <code>innerHTML</code> replaces its HTML; individual attributes go through <code>setAttribute()</code>.</p>
+
+    <pre class="code-example"><code>heading.textContent = "Welcome!";
+heading.style.color = "navy";
+heading.classList.add("highlight");</code></pre>
+
+    <p>To <strong>create</strong> and <strong>insert</strong> new elements, use <code>createElement</code> and one of <code>append</code>, <code>prepend</code>, <code>before</code>, or <code>after</code>. To <strong>remove</strong> an element, call <code>remove()</code> on it.</p>
+
+    <pre class="code-example"><code>const li = document.createElement("li");
+li.textContent = "A new item";
+document.querySelector("ul").append(li);</code></pre>
+
+    <p>Finally, <strong>events</strong> make pages reactive. Attach a listener with <code>addEventListener()</code>, and the callback runs whenever that event fires on that element:</p>
+
+    <pre class="code-example"><code>document.querySelector("button").addEventListener("click", () => {
+  alert("You clicked!");
+});</code></pre>
+
+    <p>Common events: <code>click</code>, <code>dblclick</code>, <code>mouseover</code>, <code>keydown</code>, <code>keyup</code>, <code>focus</code>, <code>blur</code>, <code>change</code>, <code>submit</code>, <code>scroll</code>. The callback receives an event object — access <code>event.target</code> to know which element was clicked, <code>event.key</code> to know which key was pressed, and call <code>event.preventDefault()</code> to stop the browser's default behaviour.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>The DOM is a tree of objects representing the page.</li>
+      <li><code>querySelector()</code> and <code>querySelectorAll()</code> select elements with CSS syntax.</li>
+      <li>Change elements via <code>textContent</code>, <code>innerHTML</code>, <code>style</code>, and <code>classList</code>.</li>
+      <li>Listen for events with <code>addEventListener()</code>.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Select your page's <code>h1</code> and change its text with <code>textContent</code>.</li>
+      <li>Create a new list item and append it to a <code>&lt;ul&gt;</code>.</li>
+      <li>Attach a click listener to a button that logs "Hello" to the Console.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-Two</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-Four →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 24 — ARRAYS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-arrays">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · Building Dynamic Pages · Chapter Twenty-Four</p>
+    <h2>Working with Arrays</h2>
+    <p class="chapter-tagline">Lists of values, plus the methods that loop, filter, transform, and total them.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>An <strong>array</strong> is an ordered list of values. Create one with square brackets, or with the <code>Array</code> constructor:</p>
+
+    <pre class="code-example"><code>const fruits = ["apple", "banana", "cherry"];
+const empty = [];
+const grid = [[1, 2], [3, 4]];</code></pre>
+
+    <p>Access elements with square-bracket notation. Arrays are zero-indexed — the first element is at <code>fruits[0]</code>.</p>
+
+    <p>Arrays come with powerful iteration methods that take a callback and run it for each element. The four most useful:</p>
+
+    <pre class="code-example"><code>const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(n => console.log(n));         // Prints each
+const doubled = numbers.map(n => n * 2);      // [2, 4, 6, 8, 10]
+const evens  = numbers.filter(n => n % 2 === 0); // [2, 4]
+const total  = numbers.reduce((sum, n) => sum + n, 0); // 15</code></pre>
+
+    <p>For simple iteration, a <code>for…of</code> loop is often clearer than a callback:</p>
+
+    <pre class="code-example"><code>for (const fruit of fruits) {
+  console.log(fruit);
+}</code></pre>
+
+    <p>Mutation methods change the array: <code>push()</code> and <code>pop()</code> add or remove at the end; <code>unshift()</code> and <code>shift()</code> at the beginning; <code>splice()</code> removes and inserts in one call. Non-mutating methods return a new array: <code>concat()</code>, <code>slice()</code>, <code>map()</code>, <code>filter()</code>. To search, use <code>indexOf()</code>, <code>find()</code>, <code>findIndex()</code>, or <code>includes()</code>. To sort, <code>sort()</code> — with a comparison callback for numbers, since the default sort is alphabetical.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Arrays are zero-indexed, ordered lists of values.</li>
+      <li><code>forEach</code>, <code>map</code>, <code>filter</code>, and <code>reduce</code> are the core iteration tools.</li>
+      <li><code>for…of</code> is often clearer than a callback for plain iteration.</li>
+      <li><code>push/pop</code>, <code>shift/unshift</code>, <code>splice/slice</code>, <code>sort</code>, <code>find</code> cover most day-to-day array work.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create an array of five numbers.</li>
+      <li>Use <code>map</code> to double each, then <code>filter</code> to keep only the values over 5.</li>
+      <li>Use <code>reduce</code> to sum the original array.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-Three</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-Five →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 25 — STRINGS, DATES, NUMBERS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-strings-dates-numbers">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · Building Dynamic Pages · Chapter Twenty-Five</p>
+    <h2>Manipulating Strings, Dates, and Numbers</h2>
+    <p class="chapter-tagline">The three built-in objects every script ends up using.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p><strong>Strings</strong> have a rich set of methods. <code>length</code> tells you how many characters there are. <code>includes</code>, <code>startsWith</code>, and <code>endsWith</code> test for substrings. <code>indexOf</code> finds the position of a substring; <code>slice</code>, <code>substring</code>, and <code>substr</code> extract pieces; <code>split</code> turns a string into an array; <code>replace</code> substitutes text; <code>toUpperCase</code> and <code>toLowerCase</code> change case; <code>trim</code> removes whitespace at the ends.</p>
+
+    <pre class="code-example"><code>const email = "ada@example.com";
+email.includes("@")          // true
+email.slice(0, email.indexOf("@"))  // "ada"
+email.split("@")             // ["ada", "example.com"]</code></pre>
+
+    <p><strong>Template strings</strong> (backticks) let you embed expressions in strings without concatenation — and they span multiple lines:</p>
+
+    <pre class="code-example"><code>const name = "Ada";
+console.log(`Hello, ${name}!`);</code></pre>
+
+    <p><strong>Dates</strong> come from the <code>Date</code> object. <code>new Date()</code> gives the current moment; <code>new Date("2027-05-28")</code> gives a specific day. Extract pieces with <code>getFullYear</code>, <code>getMonth</code> (zero-indexed!), <code>getDate</code>, <code>getDay</code>, <code>getHours</code>, and friends. Set pieces with the corresponding <code>set…</code> methods.</p>
+
+    <pre class="code-example"><code>const now = new Date();
+console.log(now.getFullYear(), now.getMonth() + 1, now.getDate());</code></pre>
+
+    <p><strong>Numbers</strong> come with the <code>Math</code> object. <code>Math.round</code>, <code>Math.floor</code>, <code>Math.ceil</code> round; <code>Math.abs</code> gives absolute value; <code>Math.max</code> and <code>Math.min</code> pick the largest or smallest from a list; <code>Math.random</code> gives a random decimal between 0 and 1; <code>Math.pow</code> and <code>Math.sqrt</code> do powers and roots. To convert strings to numbers, use <code>parseInt</code>, <code>parseFloat</code>, or the unary <code>+</code>.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Strings have methods for searching (<code>indexOf</code>, <code>includes</code>), extracting (<code>slice</code>, <code>split</code>), and transforming (<code>toUpperCase</code>, <code>replace</code>).</li>
+      <li>Template strings (backticks) embed expressions with <code>${}</code>.</li>
+      <li><code>Date</code> represents a moment in time; methods extract or set individual parts.</li>
+      <li><code>Math</code> gives rounding, min/max, randomness, and powers.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Split a full email address into username and domain with <code>split("@")</code>.</li>
+      <li>Print today's date in a custom format like "May 28, 2027" using <code>get…</code> methods.</li>
+      <li>Use <code>Math.random</code> and <code>Math.floor</code> to generate a random integer from 1 to 10.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-Four</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-Six →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 26 — WEB STORAGE
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-web-storage">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · Building Dynamic Pages · Chapter Twenty-Six</p>
+    <h2>Storing User Data in the Browser</h2>
+    <p class="chapter-tagline">localStorage, sessionStorage, and the JSON that carries objects across the gap.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <strong>Web Storage API</strong> gives your scripts a place to save data directly in the user's browser — no server required. There are two storage spaces: <code>localStorage</code> persists until you delete it; <code>sessionStorage</code> clears when the browser tab closes. Both hold key-value pairs as strings.</p>
+
+    <pre class="code-example"><code>localStorage.setItem("username", "Ada");
+const user = localStorage.getItem("username"); // "Ada"
+localStorage.removeItem("username");
+localStorage.clear();</code></pre>
+
+    <p>You can't store an object directly — only strings. To save a complex structure, convert it to text first with <strong>JSON</strong> (JavaScript Object Notation). To load it back, parse it.</p>
+
+    <pre class="code-example"><code>const prefs = { theme: "dark", fontSize: 16 };
+localStorage.setItem("prefs", JSON.stringify(prefs));
+
+const loaded = JSON.parse(localStorage.getItem("prefs"));
+console.log(loaded.theme); // "dark"</code></pre>
+
+    <p>You can inspect what a page has saved in the browser's dev tools — under <em>Application</em> (Chrome, Edge) or <em>Storage</em> (Firefox, Safari), look for Local Storage and Session Storage. That's where you'll see the keys and values your script has written.</p>
+
+    <p>Web storage is per-origin and per-browser. If your user visits in Chrome on Monday and Safari on Tuesday, the data won't follow them. For anything you need across devices — or across many users — you need a server, which is outside this book's scope.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>localStorage</code> persists; <code>sessionStorage</code> clears with the tab.</li>
+      <li>Both store strings only — use <code>JSON.stringify</code> and <code>JSON.parse</code> for objects.</li>
+      <li>Clear individual items with <code>removeItem</code>, all items with <code>clear</code>.</li>
+      <li>Storage is per-origin and per-browser.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Save your name to <code>localStorage</code> and log it back on reload.</li>
+      <li>Save an object (with <code>JSON.stringify</code>) and read it back (with <code>JSON.parse</code>).</li>
+      <li>View your stored data in the dev tools' Application/Storage panel.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-Five</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-Seven →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 27 — DEBUGGING
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-debugging">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · Building Dynamic Pages · Chapter Twenty-Seven</p>
+    <h2>Debugging Your Code</h2>
+    <p class="chapter-tagline">When things go wrong, the tools that help you find out why.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Three kinds of errors exist. <strong>Syntax errors</strong> are typos in the code — the script never runs. <strong>Runtime errors</strong> happen while the script is running — usually a reference to something that doesn't exist. <strong>Logic errors</strong> are when the code runs but produces the wrong answer — the hardest to find because there's no error message pointing at them.</p>
+
+    <p>The <strong>Console</strong> is your first stop. It shows messages, error reports, and output from <code>console.log()</code>. Read the error messages carefully — they usually point to a line number and a file. The browser's console also has an input line where you can run expressions live to test your understanding.</p>
+
+    <p>The <strong>debugger</strong> is your second stop. It lets you pause your code mid-execution, inspect the values of variables, and step through statements one at a time. Set a breakpoint by clicking a line number in the Sources panel. Refresh the page. The browser pauses before that line, showing you the current state of everything.</p>
+
+    <p>From there, use <em>Step Over</em> (F10) to advance one line, <em>Step Into</em> (F11) to dive into a function call, <em>Step Out</em> (Shift+F11) to finish the current function and return. Watch your variables in the <em>Scope</em> panel, and add <em>watch expressions</em> to track a specific value as it changes.</p>
+
+    <pre class="code-example"><code>const pageFooter = document.querySelector("footer");
+const year = new Date().getFullYear();
+pagefooter.innerHTML = "Copyright " + year; // Bug: pagefooter vs pageFooter</code></pre>
+
+    <p>The most common errors, by frequency: using reserved words as variable names; misspelling variable names; mismatched case (<code>firstName</code> vs <code>firstname</code>); mismatched quotes or brackets; using <code>=</code> instead of <code>===</code>; referencing elements before they're loaded; infinite loops.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Syntax errors stop the script; runtime errors break it; logic errors produce wrong results.</li>
+      <li>The Console shows errors and logs; the debugger lets you pause, inspect, and step.</li>
+      <li>Breakpoints, watch expressions, and step commands are your tools.</li>
+      <li>Read error messages carefully — they usually point at the problem.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Introduce a typo in a variable name and see what error the Console shows.</li>
+      <li>Set a breakpoint inside a loop and step through three iterations.</li>
+      <li>Add a watch expression for a variable and watch it change as you step.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-Six</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-Eight →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 28 — PROCESSING FORM DATA
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-form-data">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · Building Dynamic Pages · Chapter Twenty-Eight</p>
+    <h2>Processing Form Data</h2>
+    <p class="chapter-tagline">Wiring up HTML forms to JavaScript behaviour.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>HTML forms gather input; JavaScript processes it. To read a text field's value, access its <code>value</code> property. To set it, assign to <code>value</code>. To know which checkbox is checked, read its <code>checked</code> property. To know which radio button in a group is selected, use the <code>:checked</code> selector.</p>
+
+    <pre class="code-example"><code>const input = document.querySelector("#email");
+console.log(input.value);     // the current text
+
+const box = document.querySelector("#subscribe");
+console.log(box.checked);     // true or false
+
+const delivery = document.querySelector(
+  'input[name="delivery"]:checked'
+);
+console.log(delivery.value);</code></pre>
+
+    <p>For selection lists, the <code>&lt;select&gt;</code> element exposes <code>selectedOptions</code> — a collection of the currently selected options. Get their values or their display text with <code>.value</code> or <code>.text</code>.</p>
+
+    <pre class="code-example"><code>const select = document.querySelector("#hair-style");
+const option = select.selectedOptions[0];
+console.log(option.value, option.text);</code></pre>
+
+    <p>Forms also emit events. The <code>change</code> event fires when a field's value changes; the <code>submit</code> event fires when the form is submitted; <code>focus</code> and <code>blur</code> fire when a field gains or loses focus. Use these to validate input, update the page in real time, and prevent submission until everything is correct.</p>
+
+    <pre class="code-example"><code>document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = document.querySelector("#email").value;
+  if (!email.includes("@")) {
+    alert("Please enter a valid email.");
+    return;
+  }
+  console.log("Form data ready to process:", email);
+});</code></pre>
+
+    <p>The <code>e.preventDefault()</code> call stops the browser from sending the form to the server — which is what we want here, since we're processing entirely in JavaScript. When you're ready to send data to a real server, the form will submit on its own, but that's beyond this book's scope.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Read and set field values via the <code>.value</code> property; check state via <code>.checked</code>.</li>
+      <li>For radio groups and dropdowns, use <code>:checked</code> or <code>selectedOptions</code>.</li>
+      <li>Listen for <code>change</code>, <code>submit</code>, <code>focus</code>, and <code>blur</code> events.</li>
+      <li>Use <code>e.preventDefault()</code> to stop a submit while you process the data.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add a submit handler that prevents default and logs each field's value.</li>
+      <li>Validate an email field with a simple <code>includes("@")</code> check.</li>
+      <li>Update a live preview on the page every time the user types in a text field.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-Seven</button>
+    <button class="nav-button" data-nav="next">Enter Book Five →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOK 5 DIVIDER — LOOKING GOOD WITH LAYOUTS
+     ============================================================ -->
+<section class="book-page cover-page part-page part-five" id="book-five">
+  <div class="cover-content">
+    <p class="part-number">Book Five</p>
+    <h1>Looking Good with Layouts</h1>
+    <p class="part-desc">Page flow, floats, positioning, Flexbox, Grid, and the responsive design that makes a layout work on every screen.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter Twenty-Nine →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 29 — LAYOUT BASICS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-layout-basics">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Five · Looking Good with Layouts · Chapter Twenty-Nine</p>
+    <h2>Exploring Some Layout Basics</h2>
+    <p class="chapter-tagline">Page flow, floats, positioning, and stacking.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>By default, the browser lays a page out simply: block elements stack top to bottom; inline elements flow along the text. That's the <strong>page flow</strong>. Everything else in CSS layout is a way of stepping outside that default.</p>
+
+    <p>The oldest such step is <strong>floating</strong>. Give an element <code>float: left</code> or <code>float: right</code> and it gets pushed to that side of its container, with surrounding text wrapping around it. This is how pull quotes work, and how images float alongside body text. The catch: floated elements are removed from normal flow, so their parent containers may collapse to zero height. The fix is a technique called <em>clearfix</em> — or, in modern code, simply using Flexbox or Grid instead.</p>
+
+    <pre class="code-example"><code>.logo { float: left; margin-right: 1em; }
+
+/* Clearfix on a parent */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}</code></pre>
+
+    <p><strong>Positioning</strong> gives finer control. The <code>position</code> property takes four useful values beyond <code>static</code>. <code>relative</code> shifts an element from its normal position (without removing its space). <code>absolute</code> positions an element relative to its nearest positioned ancestor, and removes it from flow. <code>fixed</code> pins an element to the viewport — a sticky header. <code>sticky</code> combines relative and fixed — the element scrolls normally until it reaches a specified threshold, then pins.</p>
+
+    <pre class="code-example"><code>header {
+  position: sticky;
+  top: 0;
+  background: white;
+}</code></pre>
+
+    <p><strong>Stacking</strong> controls which element appears on top when they overlap. Positioned elements stack in source order, but <code>z-index</code> — an integer — lets you reorder them. Higher <code>z-index</code> appears on top. The tricky part is <em>stacking contexts</em>: once an element creates a new stacking context (which happens, for instance, when it sets <code>position</code> non-statically and <code>z-index</code> to a number), its children can't escape that context — a higher <code>z-index</code> inside the child won't lift it above a sibling of the parent's own stacking level.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Default page flow stacks blocks and flows inlines.</li>
+      <li>Floats break out of flow; clearfix prevents container collapse.</li>
+      <li><code>position</code> takes <code>relative</code>, <code>absolute</code>, <code>fixed</code>, or <code>sticky</code>.</li>
+      <li><code>z-index</code> reorders overlapping positioned elements.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Float an image to the right of a paragraph and observe the wrapping.</li>
+      <li>Make a header sticky with <code>position: sticky; top: 0</code>.</li>
+      <li>Create two overlapping divs and reorder them with <code>z-index</code>.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Book Five</button>
+    <button class="nav-button" data-nav="next">Chapter Thirty →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 30 — FLEXBOX
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-flexbox">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Five · Looking Good with Layouts · Chapter Thirty</p>
+    <h2>Getting Fancy with Flexbox</h2>
+    <p class="chapter-tagline">One-dimensional layout that just works.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p><strong>Flexbox</strong> is CSS's tool for laying out items along a single axis — a row or a column. It's the modern way to centre things, distribute space, and make layouts that adapt.</p>
+
+    <p>The pattern is always the same: designate a <strong>flex container</strong> with <code>display: flex</code>, and its children automatically become <strong>flex items</strong>.</p>
+
+    <pre class="code-example"><code>.nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}</code></pre>
+
+    <p>Two properties control the two axes. <code>justify-content</code> aligns along the <strong>primary axis</strong> (the direction items flow). <code>align-items</code> aligns along the <strong>cross axis</strong>. Together, setting both to <code>center</code> gives you the famous perfectly-centred box — a feat that used to require arcane hacks.</p>
+
+    <pre class="code-example"><code>.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}</code></pre>
+
+    <p>Direction changes with <code>flex-direction</code> — <code>row</code> (default), <code>column</code>, or the reversed forms. Wrapping (when items overflow) is controlled by <code>flex-wrap: wrap</code>. Gaps between items come from the <code>gap</code> property.</p>
+
+    <p>On individual items, <code>flex: grow shrink basis</code> controls sizing. <code>flex: 1</code> on all children makes them expand equally to fill the container. <code>flex: 0 0 200px</code> pins an item to a fixed size. <code>flex: 1 0 200px</code> lets an item grow from a starting size of 200px but never shrink below it.</p>
+
+    <p>Flexbox is one-dimensional by design. For two-dimensional layout — where you control both columns and rows — use CSS Grid (next chapter). The two work well together.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>display: flex</code> on a container makes its children flex items.</li>
+      <li><code>justify-content</code> aligns along the primary axis; <code>align-items</code> along the cross axis.</li>
+      <li><code>flex-direction</code> chooses row or column; <code>flex-wrap</code> allows wrapping.</li>
+      <li><code>flex: 1</code> makes items share the space equally.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Make a horizontal nav bar with <code>display: flex</code> and even spacing.</li>
+      <li>Centre a box both horizontally and vertically with Flexbox.</li>
+      <li>Build a row of three equal-width cards using <code>flex: 1</code>.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-Nine</button>
+    <button class="nav-button" data-nav="next">Chapter Thirty-One →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 31 — CSS GRID
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-grid">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Five · Looking Good with Layouts · Chapter Thirty-One</p>
+    <h2>Laying Out a Page with CSS Grid</h2>
+    <p class="chapter-tagline">Two-dimensional layout, with named areas that describe themselves.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p><strong>CSS Grid</strong> is the tool for two-dimensional layout — you define columns and rows explicitly, then place your content within the resulting cells. It's the most powerful layout system CSS has ever had.</p>
+
+    <pre class="code-example"><code>.container {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+}</code></pre>
+
+    <p>The <code>fr</code> unit is Grid's special fraction unit — it distributes the container's free space after fixed sizes have been allocated. <code>1fr 2fr</code> splits the space in a 1:2 ratio. The <code>repeat()</code> function condenses repeated values, and <code>minmax(min, max)</code> gives a column a range. <code>auto-fit</code> with <code>minmax()</code> creates responsive grids that rearrange themselves as the viewport changes:</p>
+
+    <pre class="code-example"><code>grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));</code></pre>
+
+    <p>The most intuitive way to place items is with <strong>named grid areas</strong>. You draw a text diagram of your layout with <code>grid-template-areas</code>, then assign each child to an area with <code>grid-area</code>:</p>
+
+    <pre class="code-example"><code>.container {
+  display: grid;
+  grid-template-columns: 15vw 1fr 20vw;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "logo   header header"
+    "nav    content sidebar"
+    "footer footer footer";
+}
+
+header { grid-area: header; }
+nav    { grid-area: nav; }
+footer { grid-area: footer; }</code></pre>
+
+    <p>Alignment inside Grid is controlled by four properties: <code>justify-content</code> and <code>align-content</code> align entire tracks within the container; <code>justify-items</code> and <code>align-items</code> align each item within its cell.</p>
+
+    <p>Grid and Flexbox complement each other. Use Grid for the page's overall structure; use Flexbox for the smaller components inside each region.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>display: grid</code> on a container turns its children into grid items.</li>
+      <li><code>grid-template-columns</code> and <code>-rows</code> define the layout; <code>fr</code> distributes free space.</li>
+      <li><code>grid-template-areas</code> draws a text-based layout diagram.</li>
+      <li><code>repeat(auto-fit, minmax(240px, 1fr))</code> creates a responsive grid.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Build a 3-column grid with <code>grid-template-columns: 1fr 2fr 1fr</code>.</li>
+      <li>Draw a layout with <code>grid-template-areas</code> for header, sidebar, main, footer.</li>
+      <li>Make a responsive card grid with <code>repeat(auto-fit, minmax(240px, 1fr))</code>.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Thirty</button>
+    <button class="nav-button" data-nav="next">Chapter Thirty-Two →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 32 — RESPONSIVE LAYOUTS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-responsive">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Five · Looking Good with Layouts · Chapter Thirty-Two</p>
+    <h2>Creating Responsive Layouts</h2>
+    <p class="chapter-tagline">Making one page look right on every screen.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>A <strong>responsive</strong> page looks good and works well on any screen — phone, tablet, laptop, desktop, television. There are two complementary techniques for getting there: <em>fluid</em> layouts that scale smoothly with the viewport, and <em>adaptive</em> layouts that switch to different rules at defined thresholds.</p>
+
+    <p>Fluidity comes free with Flexbox and Grid. Set <code>flex: 1</code> on flex items and they grow or shrink with the container. Use <code>fr</code> units and <code>minmax()</code> in Grid and columns adjust themselves. Use viewport units (<code>vw</code>, <code>vh</code>) for measurements that should scale with the window. Use <code>clamp()</code> to keep type from getting too small or too large:</p>
+
+    <pre class="code-example"><code>h1 {
+  font-size: clamp(1.75rem, 1rem + 2vw, 3rem);
+}</code></pre>
+
+    <p>Adaptation comes from <strong>media queries</strong>. A media query tests something about the viewport and applies rules only when the test passes:</p>
+
+    <pre class="code-example"><code>@media (max-width: 600px) {
+  .site-logo { display: none; }
+  nav { flex-direction: column; }
+}</code></pre>
+
+    <p>The breakpoint at 600px is arbitrary — pick the widths where your particular layout starts to look wrong. Don't chase specific devices; chase the widths where your own design breaks.</p>
+
+    <p><strong>Container queries</strong> — the newer sibling of media queries — test the width of a parent element rather than the viewport, letting components adapt to their context. And <strong>user preference queries</strong> — <code>prefers-color-scheme</code>, <code>prefers-reduced-motion</code>, <code>prefers-contrast</code> — let your page respect the visitor's OS-level settings.</p>
+
+    <p>For images, set <code>max-width: 100%; height: auto</code> so they never overflow their container. For higher-fidelity delivery, use the <code>sizes</code> and <code>srcset</code> attributes on <code>&lt;img&gt;</code> to let the browser pick an appropriately sized file for the current screen — saving bandwidth on phones while still delivering crisp images on desktops.</p>
+
+    <p>And adopt a <strong>mobile-first</strong> mindset: start by designing for the smallest screen (what's absolutely essential?), then add features and complexity as the viewport grows. It's easier, and it produces leaner pages for the majority of your visitors.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Responsive pages combine <em>fluid</em> (scales smoothly) and <em>adaptive</em> (switches at breakpoints) techniques.</li>
+      <li>Use <code>clamp()</code>, viewport units, and <code>fr</code> to build fluidity into your typography and layout.</li>
+      <li>Use media queries at breakpoints where your layout actually breaks.</li>
+      <li>Respect user preferences and deliver appropriately sized images.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add a media query that hides a sidebar below 600px wide.</li>
+      <li>Set a heading's font size with <code>clamp()</code> and resize the browser to see it work.</li>
+      <li>Add <code>max-width: 100%</code> to all your images and confirm none overflow.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Thirty-One</button>
+    <button class="nav-button" data-nav="next">The Little Dictionary →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     GLOSSARY
+     ============================================================ -->
+<section class="book-page chapter-page" id="glossary">
+  <div class="chapter-header">
+    <p class="chapter-part">After the Journey</p>
+    <h2>The Little Dictionary</h2>
+    <p class="chapter-tagline">Every word you met along the way.</p>
+  </div>
+
+  <dl class="glossary-list">
+    <dt>AJAX</dt><dd>A technique for fetching data from a server without reloading the page.</dd>
+    <dt>API</dt><dd>Application Programming Interface — a set of rules for one program to talk to another.</dd>
+    <dt>Array</dt><dd>An ordered list of values, written with square brackets.</dd>
+    <dt>Block-level element</dt><dd>An element that starts on a new line and fills the width of its parent.</dd>
+    <dt>Boolean</dt><dd>A value that is either <code>true</code> or <code>false</code>.</dd>
+    <dt>Box model</dt><dd>The layered structure of content, padding, border, and margin that every element has.</dd>
+    <dt>Breakpoint</dt><dd>A viewport width at which a media query changes the layout.</dd>
+    <dt>Bug</dt><dd>A mistake in a program that makes it do something wrong.</dd>
+    <dt>Callback</dt><dd>A function passed to another function, to be called later.</dd>
+    <dt>Cascade</dt><dd>The algorithm that resolves conflicting CSS rules by origin, specificity, and source order.</dd>
+    <dt>Class</dt><dd>A named grouping of elements, applied via the <code>class</code> attribute.</dd>
+    <dt>Codec</dt><dd>The algorithm that compresses and decompresses a media file.</dd>
+    <dt>Comment</dt><dd>A note in code that the computer ignores.</dd>
+    <dt>Const</dt><dd>A variable whose binding cannot be reassigned.</dd>
+    <dt>CSS</dt><dd>Cascading Style Sheets — the language of web page appearance.</dd>
+    <dt>Data type</dt><dd>The kind of value a variable holds: number, string, Boolean, and so on.</dd>
+    <dt>Declaration</dt><dd>A single property-value pair inside a CSS rule.</dd>
+    <dt>DOM</dt><dd>The Document Object Model — the tree of elements representing a web page.</dd>
+    <dt>Event</dt><dd>Something that happens in the browser, like a click or keypress.</dd>
+    <dt>Flexbox</dt><dd>A CSS layout system for one-dimensional layouts.</dd>
+    <dt>Float</dt><dd>A CSS technique that pushes an element to one side so text wraps around it.</dd>
+    <dt>Function</dt><dd>A reusable block of code that can take arguments and return a value.</dd>
+    <dt>Grid</dt><dd>A CSS layout system for two-dimensional layouts.</dd>
+    <dt>HTML</dt><dd>HyperText Markup Language — the language of web page structure.</dd>
+    <dt>HTTP</dt><dd>The protocol the web uses to move requests and responses.</dd>
+    <dt>Inline element</dt><dd>An element that flows with surrounding text rather than starting a new line.</dd>
+    <dt>JavaScript</dt><dd>The programming language that runs in every web browser.</dd>
+    <dt>JSON</dt><dd>JavaScript Object Notation — a text format for structured data.</dd>
+    <dt>Let</dt><dd>A variable declaration whose value can be reassigned.</dd>
+    <dt>Loop</dt><dd>A construct that repeats a block of code until a condition is met.</dd>
+    <dt>Margin</dt><dd>The space outside an element's border.</dd>
+    <dt>Media query</dt><dd>A CSS rule that applies styles only when the viewport meets a condition.</dd>
+    <dt>Node</dt><dd>One item in the DOM tree: an element, an attribute, a text fragment, or a comment.</dd>
+    <dt>Object</dt><dd>A collection of named values (properties) and functions (methods).</dd>
+    <dt>Padding</dt><dd>The space inside an element's border, around its content.</dd>
+    <dt>Parameter</dt><dd>A named input slot in a function definition.</dd>
+    <dt>Pseudo-class</dt><dd>A CSS selector that styles elements based on state or position.</dd>
+    <dt>Pseudo-element</dt><dd>A CSS construct that creates a fake sub-element for styling.</dd>
+    <dt>Recursion</dt><dd>A function calling itself.</dd>
+    <dt>Responsive</dt><dd>A design that adapts to any screen size.</dd>
+    <dt>Scope</dt><dd>The part of a program where a variable is visible.</dd>
+    <dt>Selector</dt><dd>The part of a CSS rule that says which elements to style.</dd>
+    <dt>String</dt><dd>A piece of text, written between quotation marks.</dd>
+    <dt>Syntax</dt><dd>The rules of spelling and grammar a language follows.</dd>
+    <dt>Validator</dt><dd>A tool that checks code against a formal specification.</dd>
+    <dt>Variable</dt><dd>A named container that holds a value.</dd>
+    <dt>Viewport</dt><dd>The visible area of the browser window.</dd>
+    <dt>Web storage</dt><dd>The browser's built-in mechanism for saving data locally.</dd>
+    <dt>Web server</dt><dd>A computer that stores web pages and serves them to browsers.</dd>
+  </dl>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Thirty-Two</button>
+    <button class="nav-button" data-nav="next">A Note for the Reader →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BACK COVER
+     ============================================================ -->
+<section class="book-page cover-page back-cover" id="back">
+  <div class="cover-content">
+    <p class="cover-series">The Journey Ends — and Begins</p>
+    <h1>You Are a Web Developer Now</h1>
+    <p class="cover-subtitle">Not because you finished a book — but because you started making things.</p>
+    <p class="closing-line">Keep building. Keep breaking. Keep learning.</p>
+
+    <div class="cover-note" style="max-width: 460px; margin-top: 30px;">
+      This little book was refactored from <em>HTML, CSS, &amp; JavaScript All-in-One For Dummies</em>
+      by Paul McFedries, with deep gratitude for its clarity and its
+      "Talk is cheap — show me the code" spirit. All mistakes in the retelling are the adapter's own.
+    </div>
+
+    <div class="cover-credit">
+      Refactored &amp; illustrated by<br>
+      <a href="https://agunechemba.name.ng" target="_blank" rel="noopener">Agunechemba Ekene</a>
+    </div>
+
+    <div class="book-nav" style="border-top: none; margin-top: 24px;">
+      <button class="nav-button" data-nav="first">↺ Begin Again</button>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
