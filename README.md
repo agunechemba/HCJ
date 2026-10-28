@@ -65,6 +65,4 @@ This book is meant to be read with your fingers on the keyboard. Type every exam
 
 ---
 
-# [Read Book](https://agunechemba.name.ng/HCJ/)
-
 *Keep building. Keep breaking. Keep learning.*
